@@ -1,0 +1,151 @@
+:root{
+    --branco-principal: white;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #84b7f5;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url(assets/Background.png); /*como a imagem é meramente ilustrativa, não faz 'diferença' ela aparecer no projeto ou não, se põe no CSS. */
+    height: 100vh; /*pra usar 100% da tela do dispositivo. Sem isso, a imagem fica cortada*/
+    background-repeat: no-repeat; /*sem isso, a imagem ficaria repetida para ocupar 100% da tela*/
+    background-size: contain; /*preenche todo o 'container'.  Atentar para usar cover ou contain*/
+    display: grid; /*dividir a tela em 2. PRA ISSO, teve que usar 'DIV' no html*/
+    grid-template-columns: 50% 50%; /*deixar a tela na metade. Se quiser dividir mais, dá pra por, por exemplo: 33% 33% 33%*/
+    margin: 0 6em;
+    align-items: center; /*vai alinhar no meio da coluna*/
+    text-align: center; /*vai alinhar no centro da coluna*/
+}
+
+.principal__titulo{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.principal__imagem{
+    margin: 1em 0 2em 0;
+}
+.principal__link{
+    background-color: var(--botao-azul);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    display: block; /*para o 'botao' ocupar o espaço inteiro, sair da mesma linha*/
+    margin-bottom: 1em;
+}
+
+.principal__link__secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.principal__paragrafo{
+    color: var(--cinza-secundario);
+    text-align: center;
+    font-size: 12px;
+}
+
+.secundario{
+    background-image: none;
+    align-items: center;
+    margin: 0 6rem;
+}
+
+.secundario__imagem{
+    width: 80%; /*tamanho da imagem*/
+}
+
+.secundario__div__titulo{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--branco-principal);
+    margin-bottom: 0.3rem;
+}
+
+.secundario__div__paragrafo{
+    color: var(--cinza-secundario);
+}
+
+.terceira__section{
+    display: flex;
+    gap: 80px;
+}
+
+.secundario__div__link{
+    width: 40%;
+    margin-top: 2rem;
+    background-color: brown;
+}
+
+.imagem__notebook{
+    width: 90%;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*retirar a bolinha da lista*/
+    margin: 5em 0;
+}
+
+.dispositivos__lista__item{
+    font-size: 32px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 10em 1em 0em 1em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.rodape__lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 5em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape__lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+.principal__link:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
